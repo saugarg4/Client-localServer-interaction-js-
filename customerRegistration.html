@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <form id="customerForm">
+            <!-- Customer Details -->
+            <div class="row">
+                <div class="card col-md-4">
+                    <div class="card-header">
+                        <h2 class="mb-0">Personal Details</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="name">Name*:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthDate">Date of birth*:</label>
+                            <input type="date" class="form-control" id="birthDate" name="birthDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nationality">Nationality:</label>
+                            <select class="form-control" id="nationality" name="nationality">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="indian">Indian</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="aadhar">Aadhar Number*:</label>
+                            <input type="text" class="form-control" pattern="[0-9]{13}" id="aadhar" name="aadhar"
+                                required>
+                            <small class="form-text text-muted">Must have 13 digits</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number*:</label>
+                            <input type="tel" class="form-control" id="mobile" pattern="[0-9]{10}" name="mobile"
+                                required>
+                            <small class="form-text text-muted">Must have 10 digits</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerAddress">Address:</label>
+                            <textarea class="form-control" id="customerAddress" name="customerAddress"
+                                rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City:</label>
+                            <input type="text" class="form-control" id="city" name="city">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Bank Details -->
+                <div class="card col-md-4">
+                    <div class="card-header">
+                        <h2 class="mb-0">Bank Details*</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="bankName">Bank Name:</label>
+                            <input type="text" class="form-control" id="bankName" name="bankName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="accountName">Account Name:</label>
+                            <input type="text" class="form-control" id="accountName" name="accountName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="accountNumber">Account Number:</label>
+                            <input type="number" class="form-control" id="accountNumber" name="accountNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bankIfsc">IFSC:</label>
+                            <input type="text" class="form-control" id="bankIfsc" name="bankIfsc" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bankAddress">Bank address:</label>
+                            <textarea class="form-control" id="bankAddress" name="bankAddress" rows="1"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- Car Details -->
+                <div class="card col-md-4">
+                    <div class="card-header">
+                        <h2 class="mb-0">Car Details</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="carMake">Car Make*:</label>
+                            <input type="text" class="form-control" id="carMake" name="carMake" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="carModel">Car Model*:</label>
+                            <input type="text" class="form-control" id="carModel" name="carModel" pattern="[A-Za-z0-9]+"
+                                title="Only letters and numbers are allowed" required>
+                            <small class="form-text text-muted">Only letters and numbers are allowed.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="carManufacturer">Car Manufacturer*:</label>
+                            <input type="text" class="form-control" id="carManufacturer" name="carManufacturer"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manufactureDate">Date of manufacture:</label>
+                            <input type="date" class="form-control" id="manufactureDate" name="manufactureDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="carCountry">Country:</label>
+                            <input type="text" class="form-control" id="carCountry" name="carCountry">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="carNumber">Car number:</label>
+                            <input type="number" class="form-control" id="carNumber" name="carNumber">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chassisNumber">Chassis Number*:</label>
+                            <input type="text" class="form-control" id="chassisNumber" name="chassisNumber"
+                                pattern="[A-Za-z0-9]{15}" title="Only letters and numbers are allowed" required>
+                            <small class="form-text text-muted">Only letters, numbers are allowed and length has to be
+                                15
+                            </small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="engineType">Engine type:</label>
+                            <input type="text" class="form-control" id="engineType" name="engineType"
+                                pattern="[0-9]{2}">
+                            <small class="form-text text-muted">Must have 2 digits</small>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <!-- Submit Button -->
+               <button type="submit" class="btn btn-primary btn-block submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script1.js"></script>
+</body>
+
+</html>
