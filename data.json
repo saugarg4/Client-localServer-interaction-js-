@@ -1,3 +1,16 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "Anaro devi",
+      "bankName": "HDFC",
+      "accountNumber": "3245536566765",
+      "id": 1
+    },
+    {
+      "name": "Govind Nagar",
+      "bankName": "SBI",
+      "accountNumber": "3245536566765",
+      "id": 2
+    }
+  ]
 }
